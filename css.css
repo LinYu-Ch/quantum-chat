@@ -1,0 +1,182 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+	/* animate css library ^^^^*/
+
+.main-container{
+    display:{{alignMessages}};
+    background-color: {{backgroundColor}};
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 98%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+  	padding-top: 4vw;
+  	padding-inline: 1vw;
+	}
+
+/*css for chat boxes*/
+    .chat-wrapper {
+      /* border: 5px solid red; */
+      height: fit-content;
+      position: relative;
+      width: 100%;
+      display:flex;
+      flex-direction: column;
+      margin-block: 6vw;
+    }
+    .username-wrapper {
+      display: flex;
+      align-items: center;
+      width: inherit;
+      aspect-ratio: 10.1/1;
+      position: absolute;
+      translate: 0 -50%;
+	}
+/* colored tesseract next to usernames*/
+    .user-class {
+      aspect-ratio: 1;
+      height: 100%;
+      background-repeat: no-repeat;
+    }
+/* element username is stored in*/
+    .username-box {
+      height: 40%;
+      aspect-ratio: 10/1;
+      margin-left: 5px;
+      padding-inline: 1rem;
+      padding-block: 0.2rem;
+      background-color: rgba(255, 255, 255, 50%);
+      filter: drop-shadow(0.2rem 0.3rem 0 black);
+      border-radius: 3px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 4.1vw;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+    }
+/* the wave after the username element*/
+    .chat-decoration {
+      width: 100%;
+      aspect-ratio: 6/1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      translate: 0 10%;
+      display: flex;
+      align-items: start;
+    }
+/* The X at the end of the username bar*/
+
+    .chat-decoration-accent {
+      height: 65%;
+      aspect-ratio: 1;
+      translate: -50% 20%;
+      }
+/* Main chatbox */
+
+    .chat-box {
+      width: calc(80% - 1rem);
+      height: fit-content;
+      background-image: linear-gradient(black, rgb(146, 146, 146));
+      border-bottom-right-radius: 4vw;
+      padding-inline-start: 15%;
+      padding-inline-end: 1rem;
+      padding-bottom: 1rem;
+      padding-top: 5%;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 4vw;
+      float: right;
+      overflow-wrap: anywhere;
+      color: {{fontColor}};
+	  border: 1px solid #6E6E6E;
+      align-self: flex-end;
+    }
+
+
+/* Css for Subscriber / events chat */
+	.event-container {
+    display: flex;
+  	height: 100vh;
+    justify-content: left;
+ 	width: 100%;
+	}
+ .event-chat-wrapper {
+      height: fit-content;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   	  margin-block: 2.8vw;
+    }
+/* container for the 2 X decorations */
+    .accent-wrapper {
+      width: 95%;
+      display: flex;
+      align-items: center;
+	  position: absolute;
+      translate: 0 -60%;
+      
+      gap: 1%;
+      align-self: flex-end;
+    }
+/* x element */
+    #accent-1 {
+      width: 10vw;
+      translate: -50%;
+    }
+/* x element no 2*/
+    #accent-2 {
+      width: 6vw;
+      align-self: flex-end;
+      translate: -100%;
+      rotate: 10deg;
+      animation-delay: 400ms;
+    }
+/* main contairne for the event messages */
+    .event-chat {
+      width: 90%;
+      background-color: black;
+      background-image: linear-gradient(to right, black 50% , rgba(48, 48, 48, 0.475) 100%, rgba(169, 169, 169, 0.785)), url(https://cdn.streamelements.com/uploads/9e13af7d-2785-4618-954b-2ae0276ac98d.png);
+      background-size: cover;
+
+
+      aspect-ratio: 4.1/1;
+      display: flex;
+      align-items: center;
+      padding-inline-start: 5%;
+      border-top-right-radius: 12vw;
+      align-self: flex-end;
+
+      font-family: 'Open Sans', sans-serif;
+      font-size: 4.1vw;
+      color: white;
+    }
+/* container for the small white box */
+    .event-period-container {
+      padding-inline: 3.6%;
+      padding-block: 1.2%;
+      background-color: white;
+      color: black;
+      width: fit-content;
+      translate: 0 -50%;
+      margin-left: 9%;
+
+      font-family: 'Open Sans', sans-serif;
+      font-size: 4vw;
+    }
+
+/* animations */
+    .floating { 
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+ 
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50%  { transform: translateY(1vw); }
+    100%   { transform: translateY(-0px); }   
+}
