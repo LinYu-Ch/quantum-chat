@@ -14,6 +14,7 @@
     overflow: auto;
   	padding-top: 4vw;
   	padding-inline: 1vw;
+  	overflow: hidden;
 	}
 
 /*css for chat boxes*/
@@ -32,7 +33,7 @@
       width: inherit;
       aspect-ratio: 10.1/1;
       position: absolute;
-      translate: 0 -50%;
+      transform: translate(0, -50%);
 	}
 /* colored tesseract next to usernames*/
     .user-class {
@@ -63,7 +64,7 @@
       aspect-ratio: 6/1;
       background-repeat: no-repeat;
       background-size: contain;
-      translate: 0 10%;
+      transform: translate(0, 10%);
       display: flex;
       align-items: start;
     }
@@ -72,7 +73,7 @@
     .chat-decoration-accent {
       height: 65%;
       aspect-ratio: 1;
-      translate: -50% 20%;
+      transform: translate(-50%, 20%);
       }
 /* Main chatbox */
 
@@ -116,7 +117,7 @@
       display: flex;
       align-items: center;
 	  position: absolute;
-      translate: 0 -60%;
+      transform: translate(0,-60%);
       
       gap: 1%;
       align-self: flex-end;
@@ -124,13 +125,13 @@
 /* x element */
     #accent-1 {
       width: 10vw;
-      translate: -50%;
+      transform: translate(-50%);
     }
 /* x element no 2*/
     #accent-2 {
       width: 6vw;
       align-self: flex-end;
-      translate: -100%;
+      transform: translate(-100%);
       rotate: 10deg;
       animation-delay: 400ms;
     }
@@ -160,7 +161,7 @@
       background-color: white;
       color: black;
       width: fit-content;
-      translate: 0 -50%;
+      transform: translate(0,-50%);
       margin-left: 9%;
 
       font-family: 'Open Sans', sans-serif;
