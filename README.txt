@@ -14,3 +14,4 @@ the size of each chat box is based on the widget's width
 
 input animation, text color and event response settings can be configured in the settings
 
+https://youtu.be/Mec-F8kdZE8
